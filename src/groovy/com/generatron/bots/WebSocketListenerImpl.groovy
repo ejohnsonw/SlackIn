@@ -16,8 +16,7 @@ import javax.websocket.*;
 
 @ClientEndpoint
 class WebSocketListenerImpl {
-	private static String baseUrl = "https://slack.com/api/"
-	private static String token = "xoxb-9524414727-MTbKDZcXDrbWqvAScWk6k3go"
+	
 	HashMap<String,JSONObject> users = new HashMap<String,JSONObject>();
 
 	@OnMessage

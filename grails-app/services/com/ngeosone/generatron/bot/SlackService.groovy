@@ -1,7 +1,7 @@
 package com.ngeosone.generatron.bot
 
 import org.apache.commons.collections.map.HashedMap;
-//import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpPost;
 import org.codehaus.groovy.grails.web.json.JSONObject;
 
 
@@ -22,7 +22,7 @@ import javax.websocket.*;
 
 
 
-//@ClientEndpoint
+@ClientEndpoint
 class SlackService {
 	private static String baseUrl = "https://slack.com/api/"
 	private static String token = "xoxb-9524414727-MTbKDZcXDrbWqvAScWk6k3go"
@@ -37,15 +37,15 @@ class SlackService {
 	def authenticate() {
 		String url = baseUrl + "rtm.start?token="+token;
 		def rest = new RestBuilder();
-		//def resp = rest.getAt(url);
-		//def responded = resp.json;
-		//println "Ok: "+responded.ok;
-		//println "Connecting WS to: "+responded.url;
-		//println "User: "+responded.user;
+		def resp = rest.getAt(url);
+		def responded = resp.json;
+		println "Ok: "+responded.ok;
+		println "Connecting WS to: "+responded.url;
+		println "User: "+responded.user;
 
 		try {
-			//container = ContainerProvider.getWebSocketContainer();
-			//session = container.connectToServer(SlackService.class, URI.create(responded.url));
+			container = ContainerProvider.getWebSocketContainer();
+			session = container.connectToServer(SlackService.class, URI.create(responded.url));
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

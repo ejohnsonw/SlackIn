@@ -53,13 +53,11 @@ grails.project.dependency.resolution = {
 		// runtime 'mysql:mysql-connector-java:5.1.27'
 		// runtime 'org.postgresql:postgresql:9.3-1100-jdbc41'
 		runtime 'mysql:mysql-connector-java:5.1.27'
-		
 		build 'org.apache.commons:commons-lang3:3.1'
-		/*compile 'org.apache.httpcomponents:httpcore:4.1.2'
+		compile 'org.apache.httpcomponents:httpcore:4.1.2'
 		compile 'org.apache.httpcomponents:httpclient:4.1.2'
 		compile 'org.apache.httpcomponents:httpmime:4.2.5'
-		runtime 'org.apache.httpcomponents:httpcore:4.1.2'
-		runtime 'org.apache.httpcomponents:httpclient:4.1.2'*/
+		
 		compile 'org.eclipse.mylyn.github:org.eclipse.egit.github.core:2.0.4'
 		compile 'com.stripe:stripe-java:1.32.1'
 		//compile 'org.eclipse.jdt:core:3.3.0-v_771'
